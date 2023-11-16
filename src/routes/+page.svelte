@@ -2,22 +2,12 @@
   import welcome from "$lib/images/svelte-welcome.webp";
   import welcome_fallback from "$lib/images/svelte-welcome.png";
   import Speaker from "./sverdle/Speaker.svelte";
-  let name = "";
-
-  /**
-   * @type {string[]}
-   */
-  let speakers = [];
-  function addSpeaker() {
-    if (name) {
-      speakers = [...speakers, name];
-      name = "";
-    }
-  }
+  import AddSpeakerForm from "./AddSpeakerForm.svelte";
+  import { speakers } from "../store";
 </script>
 
 <svelte:head>
-  <title>Home</title>
+  <title>Grammarian Dashboard</title>
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
@@ -32,14 +22,12 @@
 
     To the Grammarian Dashboard
   </h1>
-  <form on:submit|preventDefault={addSpeaker}>
-    <input bind:value={name} />
-    <button type="submit"> Add Speaker</button>
-  </form>
-
-  {#each speakers as speaker}
-    <Speaker name={speaker} />
-  {/each}
+  <AddSpeakerForm />
+  {#if $speakers.length}
+    {#each $speakers as speaker}
+      <Speaker name={speaker} />
+    {/each}
+  {/if}
 </section>
 
 <style>
