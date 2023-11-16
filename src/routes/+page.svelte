@@ -1,8 +1,8 @@
 <script>
   import welcome from "$lib/images/svelte-welcome.webp";
   import welcome_fallback from "$lib/images/svelte-welcome.png";
-  import Speaker from "./sverdle/Speaker.svelte";
   import AddSpeakerForm from "./AddSpeakerForm.svelte";
+  import Speaker from "./Speaker.svelte";
   import { speakers } from "../store";
 </script>
 
