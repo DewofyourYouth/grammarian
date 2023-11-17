@@ -25,7 +25,7 @@
   <AddSpeakerForm />
   {#if $speakers.length}
     {#each $speakers as speaker}
-      <Speaker name={speaker} />
+      <Speaker name={speaker.name} />
     {/each}
   {/if}
 </section>

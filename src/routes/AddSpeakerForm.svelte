@@ -4,7 +4,7 @@
 
   function addSpeaker() {
     if (name) {
-      $speakers = [...$speakers, name];
+      $speakers = [...$speakers, { name, ums: 0, notes: "" }];
     }
     name = "";
   }
@@ -12,5 +12,5 @@
 
 <form on:submit|preventDefault={addSpeaker}>
   <input bind:value={name} />
-  <button type="submit"> Add Speaker</button>
+  <button class="btn btn-primary" type="submit">add a speaker</button>
 </form>

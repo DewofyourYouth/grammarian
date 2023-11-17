@@ -1,10 +1,20 @@
 <script>
   import { spring } from "svelte/motion";
+  //   import { speakers } from "../store";
+  /***
+   * @typedef {Object} Speaker
+   * @property {string} name - The speaker's name
+   * @property {number} ums - The amount of time the speaker uses ums or filler words.
+   * @property {string} notes - Notes on the speakers grammar and use of the English language
+   */
 
-  let count = 0;
+  /**
+   * @type {Speaker}
+   */
+  export let speaker;
 
   const displayed_count = spring();
-  $: displayed_count.set(count);
+  $: displayed_count.set(speaker.ums);
   $: offset = modulo($displayed_count, 1);
 
   /**
@@ -19,7 +29,7 @@
 
 <div class="counter">
   <button
-    on:click={() => (count > 0 ? (count -= 1) : 0)}
+    on:click={() => (speaker.ums > 0 ? (speaker.ums -= 1) : 0)}
     aria-label="Decrease the counter by one"
   >
     <svg aria-hidden="true" viewBox="0 0 1 1">
@@ -40,7 +50,7 @@
   </div>
 
   <button
-    on:click={() => (count += 1)}
+    on:click={() => (speaker.ums += 1)}
     aria-label="Increase the counter by one"
   >
     <svg aria-hidden="true" viewBox="0 0 1 1">
@@ -48,6 +58,7 @@
     </svg>
   </button>
 </div>
+<h4>"Um" Counter</h4>
 
 <style>
   .counter {
