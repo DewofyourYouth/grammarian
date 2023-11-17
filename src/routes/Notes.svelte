@@ -20,7 +20,8 @@
   }
 </script>
 
-<h4>Notes:</h4>
+<h4>Notes (markdown supported)</h4>
+<hr />
 <div
   class="speaker-notes"
   bind:innerText={speaker.notes}
@@ -42,5 +43,6 @@
     width: 300px;
     min-height: 120px;
     border-radius: 10px;
+    margin-bottom: 10px;
   }
 </style>
