@@ -20,7 +20,7 @@
       </picture>
     </span>
 
-    To the Grammarian Dashboard
+    to the Grammarian Dashboard
   </h1>
   <AddSpeakerForm />
   {#if $speakers.length}
