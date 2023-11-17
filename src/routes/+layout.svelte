@@ -9,7 +9,12 @@
   <main>
     <slot />
   </main>
-  <footer>Built using SvelteKit by Pangolin</footer>
+  <footer>
+    <span
+      >Built using <a href="https://kit.svelte.dev/">SvelteKit</a> by
+      <a href="https://pangolinsoftwaresolutions.com/">Pangolin</a></span
+    >
+  </footer>
 </div>
 
 <style>

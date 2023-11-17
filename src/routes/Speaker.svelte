@@ -27,14 +27,6 @@
   <div class="notes-section">
     <Notes {speaker} />
   </div>
-  <!-- <div class="preview-section">
-    <h3>Preview:</h3>
-    <section class="preview-md">
-      <SvelteMarkdown
-        source={$speakers.find((s) => s.name === speaker.name).notes}
-      />
-    </section>
-  </div> -->
 </div>
 
 <style>
@@ -49,7 +41,7 @@
     flex-grow: 1;
   }
   .notes-section {
-    flex-grow: 3;
+    flex-grow: 4;
   }
   .speaker-name > h4 {
     padding-bottom: 0;
@@ -59,17 +51,4 @@
     font-size: 2rem;
     margin-top: 10px;
   }
-  /* .preview-section {
-    text-align: left;
-    width: 300px;
-  }
-  .preview-md {
-    border: 2px #555 solid;
-    padding: 0 15px;
-    border-radius: 10px;
-    min-height: 130px;
-  }
-  .notes-section {
-    padding-top: 10px;
-  } */
 </style>
