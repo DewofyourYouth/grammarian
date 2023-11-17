@@ -9,8 +9,7 @@
   <main>
     <slot />
   </main>
-
-  <footer>Built by Pangolin</footer>
+  <footer>Built using SvelteKit by Pangolin</footer>
 </div>
 
 <style>
@@ -33,6 +32,8 @@
 
   footer {
     display: flex;
+    margin: 0 10px;
+    border-top: 2px solid #776f6f;
     flex-direction: column;
     justify-content: center;
     align-items: center;

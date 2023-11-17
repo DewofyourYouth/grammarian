@@ -40,7 +40,7 @@
   .speaker-notes {
     border: 2px cornflowerblue solid;
     padding: 10px;
-    width: 300px;
+    min-width: 500px;
     min-height: 120px;
     border-radius: 10px;
     margin-bottom: 10px;

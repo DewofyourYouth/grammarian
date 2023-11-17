@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores";
-  import logo from "$lib/images/alphabet.svg";
+  import logo from "$lib/images/svelte-logo.svg";
   import github from "$lib/images/github.svg";
 </script>
 
@@ -19,11 +19,10 @@
       <li aria-current={$page.url.pathname === "/" ? "page" : undefined}>
         <a href="/">Dashboard</a>
       </li>
-      <li aria-current={$page.url.pathname === "/about" ? "page" : undefined}>
-        <a href="/about">About</a>
-      </li>
-      <li aria-current={$page.url.pathname === "/notes" ? "page" : undefined} />
-      <a href="/notes">Notes</a>
+      <li
+        aria-current={$page.url.pathname === "/report" ? "page" : undefined}
+      />
+      <a href="/report">Report</a>
     </ul>
     <svg viewBox="0 0 2 3" aria-hidden="true">
       <path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />

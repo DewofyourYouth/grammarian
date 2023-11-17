@@ -39,10 +39,17 @@
 
 <style>
   .speaker {
+    width: 100%;
     display: flex;
     gap: 20px;
     justify-content: space-evenly;
     align-items: baseline;
+  }
+  .speaker-name {
+    flex-grow: 1;
+  }
+  .notes-section {
+    flex-grow: 3;
   }
   .speaker-name > h4 {
     padding-bottom: 0;
