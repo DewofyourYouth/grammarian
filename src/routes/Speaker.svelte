@@ -1,7 +1,6 @@
 <script>
   import Counter from "./Counter.svelte";
   import Notes from "./Notes.svelte";
-  import SvelteMarkdown from "svelte-markdown";
   import { speakers } from "../store";
   /***
    * @typedef {Object} Speaker
