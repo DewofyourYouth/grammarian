@@ -32,6 +32,7 @@
   .speaker {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: space-evenly;
     align-items: baseline;
